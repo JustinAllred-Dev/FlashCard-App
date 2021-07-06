@@ -1,9 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import trashIcon from "@iconify-icons/oi/trash";
-import bookIcon from "@iconify-icons/oi/book";
-import zoomIn from "@iconify-icons/oi/zoom-in";
-import { Icon } from "@iconify/react";
+
 import { listDecks, deleteDeck } from "../utils/api";
 
 function Home() {
@@ -47,16 +44,16 @@ function Home() {
         </div>
         <div className="card-text mb-1">{deck.description}</div>
         <Link className="btn btn-secondary mr-2" to={`/decks/${deck.id}`}>
-          {<Icon icon={zoomIn} />} View
+          <span className="oi oi-eye" /> View
         </Link>
         <Link className="btn btn-primary" to={`/decks/${deck.id}/study`}>
-          {<Icon icon={bookIcon} />} Study
+          <span className="oi oi-book" /> Study
         </Link>
         <button
           className="btn btn-danger float-right"
           onClick={() => deleteHandler(deck.id)}
         >
-          <Icon icon={trashIcon} />
+          <span className="oi oi-trash" />
         </button>
       </div>
     </li>

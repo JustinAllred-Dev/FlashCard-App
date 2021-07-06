@@ -1,7 +1,5 @@
 import React, { useState, useEffect } from "react";
 import { useHistory, useParams, Link } from "react-router-dom";
-import { Icon } from "@iconify/react";
-import homeIcon from "@iconify-icons/oi/home";
 import { updateDeck, readDeck } from "../utils/api";
 function DeckEdit() {
   const history = useHistory();
@@ -35,7 +33,9 @@ function DeckEdit() {
       <nav aria-label="breadcrumb">
         <ol className="breadcrumb">
           <li className="breadcrumb-item">
-            <Link to="/">{<Icon icon={homeIcon} />}Home</Link>
+            <Link to="/">
+              <span className="oi oi-home" /> Home
+            </Link>
           </li>
           <li className="breadcrumb-item">Edit Deck</li>
         </ol>

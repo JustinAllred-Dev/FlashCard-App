@@ -1,7 +1,5 @@
 import React, { useState } from "react";
 import { Link, useHistory } from "react-router-dom";
-import { Icon } from "@iconify/react";
-import homeIcon from "@iconify-icons/oi/home";
 import { createDeck } from "../utils/api";
 function DeckCreate() {
   const history = useHistory();
@@ -24,7 +22,9 @@ function DeckCreate() {
       <nav aria-label="breadcrumb">
         <ol className="breadcrumb">
           <li className="breadcrumb-item">
-            <Link to="/">{<Icon icon={homeIcon} />}Home</Link>
+            <Link to="/">
+              <span className="oi oi-home" /> Home
+            </Link>
           </li>
           <li className="breadcrumb-item">Create Deck</li>
         </ol>

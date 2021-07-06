@@ -1,8 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useParams, useHistory, Link } from "react-router-dom";
 import { readDeck } from "../utils/api";
-import { Icon } from "@iconify/react";
-import homeIcon from "@iconify-icons/oi/home";
 
 function Study() {
   const { deckId } = useParams();
@@ -50,7 +48,11 @@ function Study() {
       <nav aria-label="breadcrumb">
         <ol className="breadcrumb">
           <li className="breadcrumb-item">
-            <Link to="/">{<Icon icon={homeIcon} />}Home</Link>
+            <Link to="/">
+              {" "}
+              <span className="oi oi-home" />
+              Home
+            </Link>
           </li>
           <li className="breadcrumb-item">{deck.name}</li>
           <li className="breadcrumb-item">Study</li>

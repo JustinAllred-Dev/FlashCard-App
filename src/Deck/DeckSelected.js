@@ -1,12 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useParams, useHistory, Link } from "react-router-dom";
 import { readDeck, deleteDeck, deleteCard } from "../utils/api";
-import { Icon } from "@iconify/react";
-import homeIcon from "@iconify-icons/oi/home";
-import trashIcon from "@iconify-icons/oi/trash";
-import bookIcon from "@iconify-icons/oi/book";
-import brushIcon from "@iconify-icons/oi/brush";
-import plusIcon from "@iconify-icons/oi/plus";
 
 function DeckSelected() {
   const history = useHistory();
@@ -58,13 +52,13 @@ function DeckSelected() {
             className="btn btn-secondary mr-2"
             to={`/decks/${deck.id}/${card.id}/edit`}
           >
-            {<Icon icon={brushIcon} />} Edit
+            <span className="oi oi-pencil" /> Edit
           </Link>
           <button
             className="btn btn-danger float-right"
             onClick={() => cardDeleteHandler(card.id)}
           >
-            {<Icon icon={trashIcon} />}
+            <span className="oi oi-trash" />
           </button>
         </div>
       </div>
@@ -75,7 +69,10 @@ function DeckSelected() {
       <nav aria-label="breadcrumb">
         <ol className="breadcrumb">
           <li className="breadcrumb-item">
-            <Link to="/">{<Icon icon={homeIcon} />}Home</Link>
+            <Link to="/">
+              <span className="oi oi-home" />
+              Home
+            </Link>
           </li>
           <li className="breadcrumb-item">{deck.name}</li>
         </ol>
@@ -84,19 +81,19 @@ function DeckSelected() {
       <p>{deck.description}</p>
       <div>
         <Link className="btn btn-secondary mr-2" to={`/decks/${deck.id}/edit`}>
-          {<Icon icon={brushIcon} />} Edit
+          <span className="oi oi-pencil" /> Edit
         </Link>
         <Link className="btn btn-primary mr-2" to={`/decks/${deck.id}/study`}>
-          {<Icon icon={bookIcon} />} Study
+          <span className="oi oi-book" /> Study
         </Link>
         <Link className="btn btn-primary" to={`/decks/${deck.id}/cards/new`}>
-          {<Icon icon={plusIcon} />} Add Cards
+          <span className="oi oi-plus" /> Add Cards
         </Link>
         <button
           className="btn btn-danger float-right"
           onClick={() => deckDeleteHandler(deck.id)}
         >
-          <Icon icon={trashIcon} />
+          <span className="oi oi-trash" />
         </button>
         <h1 className="mt-2">Cards</h1>
         <ul className="list-group">{cardList}</ul>

@@ -1,7 +1,5 @@
 import React, { useState, useEffect } from "react";
 import { Link, useHistory, useParams } from "react-router-dom";
-import { Icon } from "@iconify/react";
-import homeIcon from "@iconify-icons/oi/home";
 import { createCard, readDeck } from "../utils/api";
 function CardCreate() {
   const history = useHistory();
@@ -39,7 +37,9 @@ function CardCreate() {
       <nav aria-label="breadcrumb">
         <ol className="breadcrumb">
           <li className="breadcrumb-item">
-            <Link to="/">{<Icon icon={homeIcon} />}Home</Link>
+            <Link to="/">
+              <span className="oi oi-home" /> Home
+            </Link>
           </li>
           <li className="breadcrumb-item">{deck.name}</li>
           <li className="breadcrumb-item">Add Card</li>
