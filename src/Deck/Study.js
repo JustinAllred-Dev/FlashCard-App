@@ -75,7 +75,7 @@ function Study() {
         <div className="card mt-2" key={selectedCard}>
           <div className="card-body">
             <h4 className="card-title mb-1">
-              {selectedCard + 1} of {deck.cards.length}
+              Card {selectedCard + 1} of {deck.cards.length}
             </h4>
             <div className="card-text mb-3">
               {deck.cards[selectedCard].front}

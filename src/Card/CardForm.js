@@ -8,12 +8,13 @@ function CardForm({ card, handleChange, handleSubmit, onFinished, deckId }) {
         <div className="form-group">
           <label htmlFor="front">
             Front:{" "}
-            <input
+            <textarea
               id="front"
               className="form-control"
               name="front"
               type="text"
               placeholder="Front of card:"
+              rows="2"
               value={card.front}
               onChange={handleChange}
             />

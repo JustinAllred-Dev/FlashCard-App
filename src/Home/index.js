@@ -40,7 +40,7 @@ function Home() {
         {" "}
         <div className="justify-content-between d-flex">
           <h4 className="card-title mb-1">{deck.name}</h4>
-          <p>cards: {deck.cards.length}</p>
+          <p>{deck.cards.length} cards</p>
         </div>
         <div className="card-text mb-1">{deck.description}</div>
         <Link className="btn btn-secondary mr-2" to={`/decks/${deck.id}`}>

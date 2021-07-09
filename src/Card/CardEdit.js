@@ -60,6 +60,7 @@ function CardEdit() {
         handleSubmit={handleSubmit}
         onFinished={onFinished}
         deckId={deckId}
+        setEditedCard={setEditedCard}
       />
     </div>
   );
