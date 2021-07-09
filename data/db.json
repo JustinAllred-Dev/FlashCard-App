@@ -55,10 +55,22 @@
       "id": 7
     },
     {
-      "front": "a",
-      "back": "a",
+      "front": "testing",
+      "back": "edit",
       "deckId": 3,
       "id": 8
+    },
+    {
+      "front": "testing",
+      "back": "add",
+      "deckId": 3,
+      "id": 9
+    },
+    {
+      "front": "more addz",
+      "back": "add",
+      "deckId": 3,
+      "id": 10
     }
   ]
 }
